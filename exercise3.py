@@ -24,38 +24,47 @@ table2 = []
 for table in GRADUATES:
     table2.append(table)
 
+
 def union(table1, table2):
     """
     Perform the union set operation on tables, table1 and table2.
 
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
-    :return: the resulting table
+    :return: the resulting table union
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-    return []
+    table_union = (table1) | (table2)
+    return table_union
+
+
 def intersection(table1, table2):
    """
     Perform the intersection set operation on tables, table1 and table2.
 
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
-    :return: the resulting table
+    :return: the resulting table intersection
     :raises:
     """
-    return []
+
+    table_intersection = (table1) & (table2)
+    return table_intersection
+
+
 def difference(table1, table2):
     """
     Perform the difference set operation on tables, table1 and table2.
 
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
-    :return: the resulting table
+    :return: the resulting table difference
     :raises:
     """
-    return []
 
+    table_differnce = (table2) - (table1)
+    return table_difference
 
 
 

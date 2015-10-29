@@ -35,7 +35,7 @@ def pig_latinify(word):
 
     """
 
-    :param :
+    :param word: a word starting with vowel or consonant
     :return: the resulting pig latin word
     :raises: none
 
