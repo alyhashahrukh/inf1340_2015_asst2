@@ -13,26 +13,6 @@ __license__ = "MIT License"
 
 
 def pig_latinify(word):
-
-    if len(word) > 0 and word.isalpha():
-        return True
-
-    first_letter = word[0]
-
-    if first_letter == "a" or "e" or "i" or "o" or "u":
-        word_vowel = word.lower()
-        word_vowel.append("yay")
-        return (word_vowel)
-
-    elif first_letter != "a" or "e" or "i" or "o" or "u":
-        word_consonant = word.lower() + first_letter
-        word_consonant = word_consonant[1:len(word_consonant)]
-        word_consonant.append("ay")
-        return (word_consonant)
-
-    else:
-        print ('empty')
-
     """
 
     :param word: a word starting with vowel or consonant
@@ -40,6 +20,20 @@ def pig_latinify(word):
     :raises: none
 
     """
-    result = ""
+    if len(word) > 0 and word.isalpha():
+        return True
 
-    return result
+    first_letter = word[0]
+
+    if first_letter == "a" or "e" or "i" or "o" or "u":
+        word_vowel = word.lower()
+        result = word_vowel.append("yay")
+        return result
+    elif first_letter != "a" or "e" or "i" or "o" or "u":
+        word_consonant = word.lower() + first_letter
+        word_consonant = word_consonant[1:len(word_consonant)]
+        result = word_consonant.append("ay")
+        return result
+    else:
+        return "empty"
+
