@@ -21,7 +21,7 @@ def pig_latinify(word):
 
     if first_letter == "a" or "e" or "i" or "o" or "u":
         word_vowel = word.lower()
-        word_vowel.append("ay")
+        word_vowel.append("yay")
         return (word_vowel)
 
     elif first_letter != "a" or "e" or "i" or "o" or "u":
@@ -36,8 +36,8 @@ def pig_latinify(word):
     """
 
     :param :
-    :return:
-    :raises:
+    :return: the resulting pig latin word
+    :raises: none
 
     """
     result = ""

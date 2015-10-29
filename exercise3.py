@@ -13,6 +13,17 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
+GRADUATES = [["Number", "Surname", "Age"],
+            [7274, "Robinson", 37],
+            [7432, "O'Malley", 39],
+            [9824, "Darkes", 38]]
+table1 = GRADUATES
+
+#Deep copy of table1 using .append to create table2
+table2 = []
+for table in GRADUATES:
+    table2.append(table)
+
 def union(table1, table2):
     """
     Perform the union set operation on tables, table1 and table2.
@@ -24,22 +35,29 @@ def union(table1, table2):
         if tables t1 and t2 don't have the same attributes
     """
     return []
-
-
 def intersection(table1, table2):
-    """
-    Describe your function
+   """
+    Perform the intersection set operation on tables, table1 and table2.
 
+    :param table1: a table (a List of Lists)
+    :param table2: a table (a List of Lists)
+    :return: the resulting table
+    :raises:
     """
     return []
-
-
 def difference(table1, table2):
     """
-    Describe your function
+    Perform the difference set operation on tables, table1 and table2.
 
+    :param table1: a table (a List of Lists)
+    :param table2: a table (a List of Lists)
+    :return: the resulting table
+    :raises:
     """
     return []
+
+
+
 
 
 #####################
