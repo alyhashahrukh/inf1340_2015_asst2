@@ -40,7 +40,7 @@ def union(table1, table2):
     for u in table1 and table2:
         u = table1.union(table2)
         table_union.append(u)
-        return table_union
+    return table_union
 
 
 def intersection(table1, table2):
