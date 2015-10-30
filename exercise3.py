@@ -35,6 +35,7 @@ def union(table1, table2):
     :raises: MismatchedAttributesException: none?
         if tables t1 and t2 don't have the same attributes
     """
+
     table_union = []
     for u in table1 and table2:
         u = table1.union(table2)
