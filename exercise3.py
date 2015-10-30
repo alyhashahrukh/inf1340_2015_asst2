@@ -24,6 +24,7 @@ table2 = []
 for table in GRADUATES:
     table2.append(table)
 
+
 def union(table1, table2):
     """
     Perform the union set operation on tables, table1 and table2.
@@ -70,7 +71,7 @@ def difference(table1, table2):
 
     table_difference = []
     for differ in table1 and table2:
-        differ = table1.union(table2)
+        differ = table1.difference(table2)
         table_difference.append(differ)
     return table_difference
 
