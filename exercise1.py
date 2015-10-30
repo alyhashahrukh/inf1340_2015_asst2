@@ -20,20 +20,17 @@ def pig_latinify(word):
     :raises: none
 
     """
-    if len(word) > 0 and word.isalpha():
-        return True
-
     first_letter = word[0]
-
-    if first_letter == "a" or "e" or "i" or "o" or "u":
-        word_vowel = word.lower()
-        result = word_vowel.append("yay")
-        return result
-    elif first_letter != "a" or "e" or "i" or "o" or "u":
-        word_consonant = word.lower() + first_letter
-        word_consonant = word_consonant[1:len(word_consonant)]
-        result = word_consonant.append("ay")
-        return result
-    else:
-        return "empty"
+    if len(word) > 0 and word.isalpha():
+        if first_letter == "a" or "e" or "i" or "o" or "u":
+            word_vowel = word.lower()
+            result = word_vowel.append("yay")
+            return result
+        elif first_letter != "a" or "e" or "i" or "o" or "u":
+            word_consonant = word.lower() + first_letter
+            word_consonant = word_consonant[1:len(word_consonant)]
+            result = word_consonant.append("ay")
+            return result
+        else:
+            return ""
 
