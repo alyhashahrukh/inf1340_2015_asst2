@@ -24,7 +24,6 @@ table2 = []
 for table in GRADUATES:
     table2.append(table)
 
-
 def union(table1, table2):
     """
     Perform the union set operation on tables, table1 and table2.
@@ -32,24 +31,30 @@ def union(table1, table2):
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
     :return: the resulting table union
-    :raises: MismatchedAttributesException:
+    :raises: MismatchedAttributesException: none?
         if tables t1 and t2 don't have the same attributes
     """
-    table_union = (table1) | (table2)
-    return table_union
+    table_union = []
+    for u in table1 and table2:
+        u = table1.union(table2)
+        table_union.append(u)
+        return table_union
 
 
 def intersection(table1, table2):
-   """
+    """
     Perform the intersection set operation on tables, table1 and table2.
 
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
     :return: the resulting table intersection
-    :raises:
+    :raises: none?
     """
 
-    table_intersection = (table1) & (table2)
+    table_intersection = []
+    for intersect in table1 and table2:
+        intersect = table1.intersection(table2)
+        table_intersection.append(intersect)
     return table_intersection
 
 
@@ -60,13 +65,19 @@ def difference(table1, table2):
     :param table1: a table (a List of Lists)
     :param table2: a table (a List of Lists)
     :return: the resulting table difference
-    :raises:
+    :raises: none?
     """
 
-    table_differnce = (table2) - (table1)
+    table_difference = []
+    for differ in table1 and table2:
+        differ = table1.union(table2)
+        table_difference.append(differ)
     return table_difference
 
 
+
+
+#NOT SURE WHAT TO DO WITH THIS def remove_duplicates(1) function #
 
 
 #####################
