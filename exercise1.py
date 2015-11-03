@@ -14,49 +14,30 @@ __license__ = "MIT License"
 
 
 def pig_latinify(word):
+
+    """
+    :param word: a word starting with vowel or consonant
+    :return: the resulting pig latin word
+    :raises: none
+    """
+
     if len(word) > 0 and word.isalpha():
         word = word.lower()
         result = ""
         vowel = "a,e,i,o,u"
         if word[0] is vowel:
             return result + yay
-        while word[0] is not vowel:
-            word[0] += (word[1:] + word[0])
-            if word[0] == vowel:
-                print result + "ay"
+        elif word[0] is not vowel:
+            for i in range(1, len(word)):
+                if word[i] in vowel:
+                    word = word[i:] + word[:i] + "ay"
+                    result += word
+                    return result
         else:
             return ""
 
-print pig_latinify("crapple")
 
 
-"""
-def pig_latinify(word):
-    """
 
-    :param word: a word starting with vowel or consonant
-    :return: the resulting pig latin word
-    :raises: none
-
-    """
-
-    if len(word) > 0 and word.isalpha():
-        first_letter = word[0]
-        word = word.lower()
-        vowel = "a" or "e" or "i" or "o" or "u":
-        result = []
-        if first_letter :
-            result.append(word + "yay")
-            return result
-        elif first_letter != "a" or "e" or "i" or "o" or "u":
-            result.append(word[1:len(word)] + first_letter + "ay")
-            return result
-
-
-"""
-
-""" consonant word + ay"  change to while loop to accomodate words liek "scratch"
-    else:
-        return """
 
 
