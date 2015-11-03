@@ -26,7 +26,7 @@ def pig_latinify(word):
         result = ""
         vowel = "a,e,i,o,u"
         if word[0] is vowel:
-            return result + yay
+            return result + "yay"
         elif word[0] is not vowel:
             for i in range(1, len(word)):
                 if word[i] in vowel:
