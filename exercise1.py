@@ -14,7 +14,7 @@ __license__ = "MIT License"
 
 def pig_latinify(word):
     """
-    Describe your function 
+    Describe your function
 
     :param :
     :return:
