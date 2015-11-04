@@ -12,15 +12,34 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
+
 def pig_latinify(word):
-    """
-    Describe your function THIS IS A TEST!!!!!
-
-    :param :
-    :return:
-    :raises:
 
     """
-    result = ""
+    :param word: a word starting with vowel or consonant
+    :return: the resulting pig latin word
+    :raises: none
+    """
 
-    return result
+
+
+    if len(word) > 0 and word.isalpha():
+        word = word.lower()
+        result = ""
+        vowel = "a,e,i,o,u"
+        if word[0] is vowel:
+            return result + "yay"
+        elif word[0] is not vowel:
+            for i in range(1, len(word)):
+                if word[i] in vowel:
+                    word = word[i:] + word[:i] + "ay"
+                    result += word
+                    return result
+        else:
+            return ""
+
+
+
+
+
+
