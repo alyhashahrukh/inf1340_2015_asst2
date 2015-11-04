@@ -65,6 +65,7 @@ def union(table1, table2):
     """
 
 
+
 def intersection(table1, table2):
     """
     Perform the intersection set operation on tables, table1 and table2.
@@ -75,8 +76,8 @@ def intersection(table1, table2):
     """
 
     table_intersection = []
-    for intersect in t1 and t2:
-        intersect = t1.intersection(t2)
+    for intersect in table1 and table2:
+        intersect = table1.intersection(table2)
         table_intersection.append(intersect)
         return table_intersection
     """
@@ -96,8 +97,8 @@ def difference(table1, table2):
     """
 
     table_difference = []
-    for differ in t1 and t2:
-        differ = t1.difference(t2)
+    for differ in table1 and table2:
+        differ = table1.difference(table2)
         table_difference.append(differ)
         return table_difference
 
