@@ -22,7 +22,6 @@ def pig_latinify(word):
     """
 
 
-
     if len(word) > 0 and word.isalpha():
         word = word.lower()
         result = ""
