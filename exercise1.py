@@ -21,6 +21,8 @@ def pig_latinify(word):
     :raises: none
     """
 
+
+
     if len(word) > 0 and word.isalpha():
         word = word.lower()
         result = ""
