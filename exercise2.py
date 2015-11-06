@@ -12,25 +12,38 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
-def find(input_string, substring, start, end):
+def find(input_string, substring, start=0, end=1):
 
-    if len(substring) > len(input_string):
-        return -1
-
-    if end > len(input_string):
-        end = len(input_string)
-    for i in range(start, end):
-        index = i
-    for j in range(len(substring)):
-        if not substring[j] == input_string[i + j]:
-            index = -1
-            break
-    if index >= 0:
-        return index
-        return -1
+    """
+    :param:
+    :return:
+    :raises:
+    """
+    index = start
+    while 0 <= index < len(input_string):
+        if input_string[index] == substring:
+            return index
+        index += end
+    return -1
 
 
 def multi_find(input_string, substring, start, end):
+
+    """
+    :param:
+    :return:
+    :raises:
+    """
+
     result = ""
+    index = start
 
+    while 0 <= index < len(input_string):
+        if input_string[index] == substring:
+            result = result + str(index) + ","
+        index += 1
+    else:
+        index += 1
 
+    result = result[0:len(result) - 1]
+    return -1
