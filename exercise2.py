@@ -13,27 +13,24 @@ __license__ = "MIT License"
 
 
 def find(input_string, substring, start, end):
-    """
-    Describe your function
 
-    :param :
-    :return:
-    :raises:
+    if len(substring) > len(input_string):
+        return -1
 
-    """
-    return -1
+    if end > len(input_string):
+        end = len(input_string)
+    for i in range(start, end):
+        index = i
+    for j in range(len(substring)):
+        if not substring[j] == input_string[i + j]:
+            index = -1
+            break
+    if index >= 0:
+        return index
+        return -1
 
 
 def multi_find(input_string, substring, start, end):
-    """
-    Describe your function
-
-    :param :
-    :return:
-    :raises:
-
-    """
     result = ""
 
-    return result
 
