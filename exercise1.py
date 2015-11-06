@@ -14,7 +14,7 @@ __license__ = "MIT License"
 
 def pig_latinify(word):
     """
-    :param word: a word starting with vowel or consonant
+    :param: a word starting with vowel or consonant
     :return: the resulting pig latin word
     :raises: none
     """
