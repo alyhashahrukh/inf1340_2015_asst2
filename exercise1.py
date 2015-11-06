@@ -12,16 +12,12 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 
-
 def pig_latinify(word):
-
     """
     :param word: a word starting with vowel or consonant
     :return: the resulting pig latin word
     :raises: none
     """
-
-
 
     if len(word) > 0 and word.isalpha():
         word = word.lower()
