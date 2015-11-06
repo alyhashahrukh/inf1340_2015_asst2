@@ -15,9 +15,9 @@ __license__ = "MIT License"
 def find(input_string, substring, start=0, end=1):
 
     """
-    :param:
-    :return:
-    :raises:
+    :param: string, substring, start integer, end integer
+    :return: start index of string as integer
+    :raises: -1
     """
     index = start
     while 0 <= index < len(input_string):
@@ -30,9 +30,9 @@ def find(input_string, substring, start=0, end=1):
 def multi_find(input_string, substring, start, end):
 
     """
-    :param:
-    :return:
-    :raises:
+    :param: string, substring, start integer, end integer
+    :return: variable result
+    :raises: -1
     """
 
     result = ""
