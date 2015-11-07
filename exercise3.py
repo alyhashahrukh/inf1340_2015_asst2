@@ -12,6 +12,16 @@ __email__ = "ses@drsusansim.org"
 __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
+GRADUATES = [["Number", "Surname", "Age"],
+             [7274, "Robinson", 37],
+             [7432, "O'Malley", 39],
+             [9824, "Darkes", 38]]
+
+MANAGERS = [["Number", "Surname", "Age"],
+            [9297, "O'Malley", 56],
+            [7432, "O'Malley", 39],
+            [9824, "Darkes", 38]]
+
 
 def union(table1, table2):
     """
@@ -23,7 +33,7 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-    return list(set(table1) | set(table2))
+    return list(set(GRADUATES) | set(MANAGERS))
 
 
 def intersection(table1, table2):
@@ -31,7 +41,7 @@ def intersection(table1, table2):
     Describe your function
 
     """
-    return list(set(table1) & set(table2))
+    return list(set(GRADUATES) & set(MANAGERS))
 
 
 def difference(table1, table2):
@@ -39,7 +49,7 @@ def difference(table1, table2):
     Describe your function
 
     """
-    return list(set(table1) - set(table2))
+    return list(set(GRADUATES) - set(MANAGERS))
 
 
 #####################
@@ -59,10 +69,6 @@ def remove_duplicates(l):
             d[tuple(row)] = True
 
     return result
-
-    print union(table1, table2)
-    print intersect(table1, table2)
-    print difference(table1, table2)
 
 
 class MismatchedAttributesException(Exception):
