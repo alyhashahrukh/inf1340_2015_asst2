@@ -19,14 +19,11 @@ def find(input_string, substring, start, end):
     :return: start index of string as integer
     :raises: -1
     """
-    x = (len(substring))
-
-    for i in range(start, len(input_string)):
-        if input_string[i:(i+x)] == substring:
-            return i
+    while start < end:
+        if input_string[start:start + len(substring)] == substring:
+            return start
         else:
-            i += 1
-
+            start += 1
     return -1
 
 
@@ -37,18 +34,14 @@ def multi_find(input_string, substring, start, end):
     :return: variable result
     :raises: -1
     """
+    result = ""
 
-    loop = True
-    results = ""
-    r = start - 1
-
-    while loop:
-        r = find(input_string, substring, r + 1)
-        if r != -1:
-            if results == "":
-                results += str(r)
-            else:
-                results += "," + str(r)
+    while start < end:
+        if input_string[start:start + len(substring)] == substring:
+            result = result + str(start) + ","
+            start += 1
         else:
-            loop = False
-    return results
+            start += 1
+
+        result = result[0:len(result) - 1]
+        return -1
