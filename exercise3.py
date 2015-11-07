@@ -22,6 +22,13 @@ MANAGERS = [["Number", "Surname", "Age"],
             [7432, "O'Malley", 39],
             [9824, "Darkes", 38]]
 
+# deep copy of GRADUATES[0]
+    table1 = [] + GRADUATES[0]
+    table1
+#deep copy of MANAGERS[0]
+    table2 = [] + MANAGERS[0]
+    table2
+
 
 def union(table1, table2):
     """
@@ -33,23 +40,26 @@ def union(table1, table2):
     :raises: MismatchedAttributesException:
         if tables t1 and t2 don't have the same attributes
     """
-    return list(set(GRADUATES) | set(MANAGERS))
+
+    return []
 
 
 def intersection(table1, table2):
     """
-    Describe your function
-
+    If schema of both tables is the same, returns a new table that contains
+    all unique rows that appear in both tables.
     """
-    return list(set(GRADUATES) & set(MANAGERS))
+
+    return []
 
 
 def difference(table1, table2):
     """
-    Describe your function
-
+    If schema of both tables is the same, returns a new table that contains
+    all unique rows that appear in the first table but not the second.
     """
-    return list(set(GRADUATES) - set(MANAGERS))
+
+    return []
 
 
 #####################
